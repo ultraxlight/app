@@ -1,4 +1,4 @@
-import { Handlers, PageProps } from "$fresh/server.ts";
+import { PageProps } from "$fresh/server.ts";
 import ListItem from "https://denopkg.com/ultraxlight/lists@main/src/list-items/list-item/mod.ts";
 import DeleteListItem from "../../islands/DeleteListItem.tsx";
 
