@@ -2,9 +2,11 @@ import { PageProps } from "$fresh/server.ts";
 import ListItem from "https://denopkg.com/ultraxlight/lists@main/src/list-items/list-item/mod.ts";
 import DeleteListItem from "../../islands/DeleteListItem.tsx";
 import EditListItem from "../../islands/EditListItem.tsx";
+import Storage from '../../db.ts'
 
-export default function Lists(props: PageProps) {
-  const items = ListItem.getAll();
+export default async function Lists(props: PageProps) {
+  const listItems = ListItem(Storage)
+  const items = await listItems.getAll();
 
   return (
     <section>
