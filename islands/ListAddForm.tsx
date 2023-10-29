@@ -11,7 +11,6 @@ export default function () {
   const contentRef = createRef();
 
   const db = List(Storage);
-  console.log(db);
 
   const createList = (title: string) => db.create(title);
 
