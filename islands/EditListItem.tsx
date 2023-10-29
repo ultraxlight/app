@@ -10,14 +10,19 @@ export default function ({ id, value }: { id: string; value: string }) {
       {!showForm.value
         ? <button onClick={() => showForm.value = true}>Edit</button>
         : (
-          <form style={{margin: '-24px',
-            backgroundColor: 'white',
-            position: 'absolute'}}>
+          <form
+            style={{
+              margin: "-24px",
+              backgroundColor: "white",
+              position: "absolute",
+            }}
+          >
             <input
               name="title"
               type="text"
               value={newTitle.value}
-              onChange={(evt) => newTitle.value = (evt.target as HTMLInputElement).value}
+              onChange={(evt) =>
+                newTitle.value = (evt.target as HTMLInputElement).value}
             />
             <button
               onClick={(evt) => {

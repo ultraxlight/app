@@ -7,12 +7,18 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/api/joke.ts";
 import * as $3 from "./routes/greet/[name].tsx";
 import * as $4 from "./routes/index.tsx";
-import * as $5 from "./routes/lists/index.tsx";
-import * as $6 from "./routes/lists/list-items/[id]/index.tsx";
-import * as $7 from "./routes/lists/list-items/index.tsx";
+import * as $5 from "./routes/list-items/[id]/index.tsx";
+import * as $6 from "./routes/list-items/db.ts";
+import * as $7 from "./routes/list-items/index.tsx";
+import * as $8 from "./routes/lists/[id]/index.tsx";
+import * as $9 from "./routes/lists/add.tsx";
+import * as $10 from "./routes/lists/db.ts";
+import * as $11 from "./routes/lists/index.tsx";
+import * as $12 from "./routes/partials/add.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 import * as $$1 from "./islands/DeleteListItem.tsx";
 import * as $$2 from "./islands/EditListItem.tsx";
+import * as $$3 from "./islands/ListAddForm.tsx";
 
 const manifest = {
   routes: {
@@ -21,14 +27,20 @@ const manifest = {
     "./routes/api/joke.ts": $2,
     "./routes/greet/[name].tsx": $3,
     "./routes/index.tsx": $4,
-    "./routes/lists/index.tsx": $5,
-    "./routes/lists/list-items/[id]/index.tsx": $6,
-    "./routes/lists/list-items/index.tsx": $7,
+    "./routes/list-items/[id]/index.tsx": $5,
+    "./routes/list-items/db.ts": $6,
+    "./routes/list-items/index.tsx": $7,
+    "./routes/lists/[id]/index.tsx": $8,
+    "./routes/lists/add.tsx": $9,
+    "./routes/lists/db.ts": $10,
+    "./routes/lists/index.tsx": $11,
+    "./routes/partials/add.tsx": $12,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
     "./islands/DeleteListItem.tsx": $$1,
     "./islands/EditListItem.tsx": $$2,
+    "./islands/ListAddForm.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

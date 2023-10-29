@@ -1,4 +1,5 @@
 import { AppProps } from "$fresh/server.ts";
+import { Partial } from "$fresh/runtime.ts";
 
 /*
 if (process.env.NODE_ENV==='development') {
@@ -18,7 +19,9 @@ export default function App({ Component }: AppProps) {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
+        {/* <Partial name="body"> */}
         <Component />
+        {/* </Partial> */}
       </body>
     </html>
   );
