@@ -31,7 +31,8 @@ export default async function Add(_: PageProps, ctx: RouteContext) {
       </form>
       {listItems.map((item) =>
         item && (
-          <form key={item}>
+          <form key={item.id} style={{display: 'flex'}}>
+            <input type="checkbox" name="is-done" />
             <input
               style={{ width: "100%", borderWidth: 0 }}
               name={item.id}
