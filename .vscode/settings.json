@@ -1,6 +1,7 @@
 {
   "deno.enable": true,
   "conventionalCommits.scopes": [
-    "lists"
+    "lists",
+    "styles"
   ]
 }
