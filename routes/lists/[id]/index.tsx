@@ -27,6 +27,7 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
           name="title"
           style={{ width: "100%", borderWidth: 0 }}
           value={existingList.title}
+          aria-label="list name"
         />
       </form>
       {listItems.map((item) =>
@@ -37,12 +38,13 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
             action={`/list-items/${item.id}`}
             method="POST"
           >
-            <input type="checkbox" name="is_done" checked={item.is_done} />
+            <input type="checkbox" name="is_done" checked={item.is_done} aria-label="is done"/>
             <input
               style={{ width: "100%", borderWidth: 0 }}
               name="title"
               type="text"
               value={item.title}
+              aria-label="list item"
             />
             <button type="submit">Save</button>
           </form>
@@ -53,6 +55,7 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
           style={{ width: "100%", borderWidth: 0 }}
           name="item"
           type="text"
+          aria-label="new list item"
           autofocus
         />
       </form>
