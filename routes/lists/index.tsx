@@ -1,6 +1,6 @@
 import { Handlers } from "$fresh/server.ts";
-import List from "https://denopkg.com/ultraxlight/lists@0.2.1/src/lists/list/mod.ts";
-import ListItem from "https://denopkg.com/ultraxlight/lists@0.2.1/src/list-items/list-item/mod.ts";
+import List from "lists/mod.ts";
+import ListItem from "list-items/mod.ts";
 import Storage from "./db.ts";
 import ListItemStorage from "../list-items/db.ts";
 
@@ -31,7 +31,7 @@ export const handler: Handlers = {
       }
 
       // Create Item
-      const newItem = await ListItem(ListItemStorage).create(item);
+      const newItem = await ListItem(ListItemStorage).create({ title: item });
 
       // Add to list
       await List(Storage).addItem(existingList.id, newItem.id);

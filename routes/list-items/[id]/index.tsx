@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import ListItem from "https://denopkg.com/ultraxlight/lists@0.2.1/src/list-items/list-item/mod.ts";
+import ListItem from "list-items/mod.ts";
 import Storage from "../db.ts";
 
 export const handler: Handlers = {
@@ -30,6 +30,25 @@ export const handler: Handlers = {
 
     const headers = new Headers();
     headers.set("location", "/lists");
+
+    return new Response(null, {
+      status: 303,
+      headers,
+    });
+  },
+
+  async POST(req, ctx) {
+    const id = ctx.params.id;
+    const form = await req.formData();
+    const title = form.get("title")?.toString();
+    const is_done = Boolean(form.get("is_done"));
+
+    if (id && title) {
+      const newLI = await ListItem(Storage).update(id, { title, is_done });
+    }
+
+    const headers = new Headers();
+    headers.set("location", req.headers.get("referer") || req.url);
 
     return new Response(null, {
       status: 303,

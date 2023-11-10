@@ -1,6 +1,6 @@
 import { useSignal } from "@preact/signals";
 import { createRef } from "preact";
-import List from "https://denopkg.com/ultraxlight/lists@0.2.1/src/lists/list/mod.ts";
+import List from "lists/mod.ts";
 import Storage from "../routes/lists/db.ts";
 
 export default function () {

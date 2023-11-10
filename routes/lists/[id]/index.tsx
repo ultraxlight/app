@@ -1,10 +1,10 @@
-import List from "https://denopkg.com/ultraxlight/lists@0.2.1/src/lists/list/mod.ts";
-import ListItem from "https://denopkg.com/ultraxlight/lists@0.2.1/src/list-items/list-item/mod.ts";
+import List from "lists/mod.ts";
+import ListItem from "list-items/mod.ts";
 import Storage from "../db.ts";
 import ListItemStorage from "../../list-items/db.ts";
 import { PageProps, RouteContext } from "$fresh/server.ts";
 
-export default async function Add(_: PageProps, ctx: RouteContext) {
+export default async function ListComp(_: PageProps, ctx: RouteContext) {
   const { id } = ctx.params;
 
   const existingList = Boolean(id) && await List(Storage).get(id);
@@ -31,14 +31,20 @@ export default async function Add(_: PageProps, ctx: RouteContext) {
       </form>
       {listItems.map((item) =>
         item && (
-          <form key={item.id} style={{display: 'flex'}}>
-            <input type="checkbox" name="is-done" />
+          <form
+            key={item.id}
+            style={{ display: "flex" }}
+            action={`/list-items/${item.id}`}
+            method="POST"
+          >
+            <input type="checkbox" name="is_done" checked={item.is_done} />
             <input
               style={{ width: "100%", borderWidth: 0 }}
-              name={item.id}
+              name="title"
               type="text"
               value={item.title}
             />
+            <button type="submit">Save</button>
           </form>
         )
       )}

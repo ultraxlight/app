@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import ListItem from "https://denopkg.com/ultraxlight/lists@0.2.1/src/list-items/list-item/mod.ts";
+import ListItem from "list-items/mod.ts";
 import Storage from "./db.ts";
 
 export const handler: Handlers = {
@@ -8,7 +8,7 @@ export const handler: Handlers = {
     const title = form.get("item")?.toString();
 
     if (title) {
-      await ListItem(Storage).create(title);
+      await ListItem(Storage).create({ title });
     }
 
     const headers = new Headers();
