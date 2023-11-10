@@ -38,7 +38,12 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
             action={`/list-items/${item.id}`}
             method="POST"
           >
-            <input type="checkbox" name="is_done" checked={item.is_done} aria-label="is done"/>
+            <input
+              type="checkbox"
+              name="is_done"
+              checked={item.is_done}
+              aria-label="is done"
+            />
             <input
               style={{ width: "100%", borderWidth: 0 }}
               name="title"
