@@ -44,7 +44,7 @@ export const handler: Handlers = {
     const is_done = Boolean(form.get("is_done"));
 
     if (id && title) {
-      const newLI = await ListItem(Storage).update(id, { title, is_done });
+      await ListItem(Storage).update(id, { title, is_done });
     }
 
     const headers = new Headers();

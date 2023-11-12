@@ -56,7 +56,10 @@ export default async function Lists() {
       <ul>
         {items.map((item) => (
           <li>
-            <a href={`/lists/${item.id}`}>{item.title}</a>
+            <form action={`/lists/${item.id}/delete`}>
+              <a href={`/lists/${item.id}`}>{item.title}</a>
+              <button type="submit">Delete</button>
+            </form>
           </li>
         ))}
       </ul>
