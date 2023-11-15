@@ -1,0 +1,9 @@
+button {
+  margin: 0 8px;
+}
+
+.list input[type=text] {
+  background-color: transparent;
+  border-width: 0;
+  width: 100%;
+}

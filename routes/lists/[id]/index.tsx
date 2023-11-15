@@ -1,7 +1,7 @@
 import List from "lists/mod.ts";
 import ListItem from "list-items/mod.ts";
-import Storage from "../db.ts";
 import ListItemStorage from "../../list-items/db.ts";
+import Storage from "../db.ts";
 import { PageProps, RouteContext } from "$fresh/server.ts";
 
 export default async function ListComp(_: PageProps, ctx: RouteContext) {
@@ -20,12 +20,11 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
   );
 
   return (
-    <section>
+    <section class="list">
       <form action="/lists" method="POST">
         <input
           type="text"
           name="title"
-          style={{ width: "100%", borderWidth: 0 }}
           value={existingList.title}
           aria-label="list name"
         />
@@ -45,7 +44,6 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
               aria-label="is done"
             />
             <input
-              style={{ width: "100%", borderWidth: 0 }}
               name="title"
               type="text"
               value={item.title}
@@ -57,7 +55,6 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
       )}
       <form action="/lists" method="POST">
         <input
-          style={{ width: "100%", borderWidth: 0 }}
           name="item"
           type="text"
           aria-label="new list item"
