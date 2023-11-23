@@ -50,6 +50,9 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
               aria-label="list item"
             />
             <button type="submit">Save</button>
+            <button type="submit" formaction={`/list-items/${item.id}/delete`} formmethod={'GET'}>
+              Delete
+            </button>
           </form>
         )
       )}
