@@ -1,7 +1,5 @@
 # Ultralight
-
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+Ultralight project management
 
 ### Usage
 
@@ -14,3 +12,15 @@ deno task start
 ```
 
 This will watch the project directory and restart as necessary.
+
+### Roadmap
+- #### v1
+  - Lists
+- #### v2
+  - Auth
+- #### v3
+  - Docs
+- #### v4
+  - Combined Docs and Lists
+- #### v5
+  - Encryption 
