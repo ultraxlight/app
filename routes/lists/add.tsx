@@ -1,6 +1,6 @@
 export default function Add() {
   return (
-    <form action="/lists" method="POST">
+    <form action="/api/lists" method="POST">
       <input
         type="text"
         name="title"

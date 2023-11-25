@@ -1,7 +1,7 @@
 import List from "lists/mod.ts";
 import ListItem from "list-items/mod.ts";
 import ListItemStorage from "../../api/list-items/db.ts";
-import Storage from "../db.ts";
+import Storage from "../../api/lists/db.ts";
 import { PageProps, RouteContext } from "$fresh/server.ts";
 
 export default async function ListComp(_: PageProps, ctx: RouteContext) {
@@ -21,7 +21,7 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
 
   return (
     <section class="list">
-      <form action="/lists" method="POST">
+      <form action="/api/lists" method="POST">
         <input
           type="text"
           name="title"
@@ -50,13 +50,17 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
               aria-label="list item"
             />
             <button type="submit">Save</button>
-            <button type="submit" formaction={`/list-items/${item.id}/delete`} formmethod={'GET'}>
+            <button
+              type="submit"
+              formaction={`/list-items/${item.id}/delete`}
+              formmethod={"GET"}
+            >
               Delete
             </button>
           </form>
         )
       )}
-      <form action="/lists" method="POST">
+      <form action="/api/lists" method="POST">
         <input
           name="item"
           type="text"

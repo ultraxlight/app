@@ -1,10 +1,11 @@
 import List from "lists/mod.ts";
 import ListItem from "list-items/mod.ts";
 import ListItemStorage from "../../api/list-items/db.ts";
-import Storage from "../db.ts";
+import Storage from "../../api/lists/db.ts";
 import { Handlers } from "$fresh/server.ts";
 
 export const handler: Handlers = {
+  // FETCH API
   async GET(_, ctx) {
     const id = ctx.params.id;
 
