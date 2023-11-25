@@ -17,8 +17,8 @@
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.1",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
     "$std/": "https://deno.land/std@0.193.0/",
-    "lists/": "https://denopkg.com/ultraxlight/lists@0.3.0/src/lists/list/",
-    "list-items/": "https://denopkg.com/ultraxlight/lists@0.3.0/src/list-items/list-item/"
+    "lists/": "https://denopkg.com/ultraxlight/lists@0.3.2/src/lists/list/",
+    "list-items/": "https://denopkg.com/ultraxlight/lists@0.3.2/src/list-items/list-item/"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
   "exclude": ["**/_fresh/*"]

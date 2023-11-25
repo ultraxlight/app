@@ -4,11 +4,11 @@
 
 import * as $0 from "./routes/_404.tsx";
 import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/index.tsx";
-import * as $3 from "./routes/list-items/[id]/delete.ts";
-import * as $4 from "./routes/list-items/[id]/index.tsx";
-import * as $5 from "./routes/list-items/db.ts";
-import * as $6 from "./routes/list-items/index.tsx";
+import * as $2 from "./routes/api/list-items/[id]/index.tsx";
+import * as $3 from "./routes/api/list-items/db.ts";
+import * as $4 from "./routes/api/list-items/index.tsx";
+import * as $5 from "./routes/index.tsx";
+import * as $6 from "./routes/list-items/[id]/delete.ts";
 import * as $7 from "./routes/lists/[id]/delete.ts";
 import * as $8 from "./routes/lists/[id]/index.tsx";
 import * as $9 from "./routes/lists/add.tsx";
@@ -24,11 +24,11 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
     "./routes/_app.tsx": $1,
-    "./routes/index.tsx": $2,
-    "./routes/list-items/[id]/delete.ts": $3,
-    "./routes/list-items/[id]/index.tsx": $4,
-    "./routes/list-items/db.ts": $5,
-    "./routes/list-items/index.tsx": $6,
+    "./routes/api/list-items/[id]/index.tsx": $2,
+    "./routes/api/list-items/db.ts": $3,
+    "./routes/api/list-items/index.tsx": $4,
+    "./routes/index.tsx": $5,
+    "./routes/list-items/[id]/delete.ts": $6,
     "./routes/lists/[id]/delete.ts": $7,
     "./routes/lists/[id]/index.tsx": $8,
     "./routes/lists/add.tsx": $9,

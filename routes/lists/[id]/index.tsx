@@ -1,6 +1,6 @@
 import List from "lists/mod.ts";
 import ListItem from "list-items/mod.ts";
-import ListItemStorage from "../../list-items/db.ts";
+import ListItemStorage from "../../api/list-items/db.ts";
 import Storage from "../db.ts";
 import { PageProps, RouteContext } from "$fresh/server.ts";
 
@@ -34,7 +34,7 @@ export default async function ListComp(_: PageProps, ctx: RouteContext) {
           <form
             key={item.id}
             style={{ display: "flex" }}
-            action={`/list-items/${item.id}`}
+            action={`/api/list-items/${item.id}`}
             method="POST"
           >
             <input

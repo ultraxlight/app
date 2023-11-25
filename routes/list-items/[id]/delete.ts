@@ -1,5 +1,5 @@
 import ListItems from "list-items/mod.ts";
-import Storage from "../db.ts";
+import Storage from "../../api/list-items/db.ts";
 import { Handlers } from "$fresh/server.ts";
 
 export const handler: Handlers = {

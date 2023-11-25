@@ -2,7 +2,7 @@ import { Handlers } from "$fresh/server.ts";
 import List from "lists/mod.ts";
 import ListItem from "list-items/mod.ts";
 import Storage from "./db.ts";
-import ListItemStorage from "../list-items/db.ts";
+import ListItemStorage from "../api/list-items/db.ts";
 
 export const handler: Handlers = {
   async POST(req) {

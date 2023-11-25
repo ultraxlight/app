@@ -1,4 +1,4 @@
-import { get } from "../../db.ts";
+import { get } from "../../../db.ts";
 
 const Storage = await get("list-items");
 
