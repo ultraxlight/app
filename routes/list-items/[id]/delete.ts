@@ -3,7 +3,7 @@ import { Handlers } from "$fresh/server.ts";
 export const handler: Handlers = {
   async GET(req, ctx) {
     const id = ctx.params.id;
-    const url = new URL(req.url)
+    const url = new URL(req.url);
 
     await fetch(`${url.origin}/api/list-items/${id}`, { method: "DELETE" });
 
