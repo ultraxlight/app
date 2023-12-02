@@ -7,7 +7,11 @@ export const handler: Handlers = {
     const id = ctx.params.id;
 
     if (id) {
-      await ListItem(Storage).remove(id);
+      const listItem = await ListItem(Storage).get(id);
+
+      if (listItem) {
+        await ListItem(Storage).remove(id);
+      }
     }
 
     const headers = new Headers();
@@ -39,12 +43,22 @@ export const handler: Handlers = {
 
   async POST(req, ctx) {
     const id = ctx.params.id;
+    // XXX: is this multipart form data or json content?
     const form = await req.formData();
     const title = form.get("title")?.toString();
-    const is_done = Boolean(form.get("is_done"));
 
-    if (id && title) {
-      await ListItem(Storage).update(id, { title, is_done });
+    if (id) {
+      const existingLi = await ListItem(Storage).get(id);
+      const update = { ...existingLi, ...{ title } };
+      console.log(form.has("is_done"));
+      if (form.has("is_done")) {
+        console.log(form.get("is_done"));
+        update.is_done = ["true", "on"].includes(String(form.get("is_done")))
+          ? true
+          : false;
+      }
+
+      await ListItem(Storage).update(id, update);
     }
 
     const headers = new Headers();
