@@ -15,6 +15,7 @@ export default function App({ Component }: AppProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ultralight</title>
+        <link rel="icon" href="/favicon.svg" />
         <link rel="stylesheet" href="/sakura.css" />
         <link rel="stylesheet" href="/main.css" />
       </head>

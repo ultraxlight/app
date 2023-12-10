@@ -1,4 +1,5 @@
 # Ultralight
+
 Ultralight project management
 
 ### Usage
@@ -14,6 +15,7 @@ deno task start
 This will watch the project directory and restart as necessary.
 
 ### Roadmap
+
 - #### v1
   - Lists
 - #### v2
@@ -23,4 +25,4 @@ This will watch the project directory and restart as necessary.
 - #### v4
   - Combined Docs and Lists
 - #### v5
-  - Encryption 
+  - Encryption

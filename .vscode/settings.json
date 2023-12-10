@@ -3,6 +3,7 @@
   "conventionalCommits.scopes": [
     "lists",
     "styles",
-    "list-items"
+    "list-items",
+    "api"
   ]
 }
